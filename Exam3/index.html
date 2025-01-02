@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sổ Tiết Kiệm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <h1 onclick="reloadPage()" style="cursor: pointer;">
+            Hệ Thống Quản Lý Sổ Tiết Kiệm
+        </h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Thêm Sổ Tiết Kiệm</h2>
+            <form id="soTietKiemForm">
+                <div class="form-group">
+                    <label for="maSo">Mã sổ (tối đa 5 ký tự):</label>
+                    <input type="text" id="maSo" maxlength="5" required placeholder="Nhập mã sổ...">
+                </div>
+                <div class="form-group">
+                    <label for="loaiTietKiem">Loại tiết kiệm (tối đa 10 ký tự):</label>
+                    <input type="text" id="loaiTietKiem" maxlength="10" required placeholder="Nhập loại tiết kiệm...">
+                </div>
+                <div class="form-group">
+                    <label for="hoTen">Họ tên khách hàng (tối đa 30 ký tự):</label>
+                    <input type="text" id="hoTen" maxlength="30" required placeholder="Nhập họ tên khách hàng...">
+                </div>
+                <div class="form-group">
+                    <label for="cmnd">Chứng minh nhân dân (tối đa 15 số):</label>
+                    <input type="text" id="cmnd" maxlength="15" required placeholder="Nhập số CMND...">
+                </div>
+                <div class="form-group">
+                    <label for="ngayMoSo">Ngày mở sổ:</label>
+                    <input type="date" id="ngayMoSo" required>
+                </div>
+                <div class="form-group">
+                    <label for="soTienGui">Số tiền gửi:</label>
+                    <input type="number" id="soTienGui" required placeholder="Nhập số tiền gửi...">
+                </div>
+                <button type="button" class="submit-btn" onclick="handleSubmit()">Lưu Thông Tin</button>
+                <button type="reset" class="submit-btn">Nhập lại</button>
+            </form>
+        </section>
+
+        <section class="result-container">
+            <div class="result-header">
+                <h2>Danh Sách Sổ Tiết Kiệm</h2>
+                <button type="button" class="delete-btn" onclick="handleDelete()">Xóa thông tin</button>
+            </div>
+            <div class="result-content">
+                <table class="result-table" id="resultTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Mã sổ</th>
+                            <th>Loại tiết kiệm</th>
+                            <th>Họ tên khách hàng</th>
+                            <th>Chứng minh nhân dân</th>
+                            <th>Ngày mở sổ</th>
+                            <th>Số tiền gửi</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <p>&copy; 2024 - Quản Lý Sổ Tiết Kiệm</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
