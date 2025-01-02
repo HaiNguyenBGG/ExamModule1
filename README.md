@@ -42,10 +42,8 @@
 ## Mục Lục
 
 - [Tính Năng](#tính-năng)
-- [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
 - [Cách Sử Dụng](#cách-sử-dụng)
-- [Công Nghệ Sử Dụng](#công-nghệ-sử-dụng)
-- [Đóng Góp](#đóng-góp)
+- [Hướng dẫn chi tiết](#hướng-dẫn-chi-tiết)
 
 ## Tính Năng
 
